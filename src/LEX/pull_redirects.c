@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pull_redirects.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vlima-nu <vlima-nu@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 20:31:09 by vlima-nu          #+#    #+#             */
-/*   Updated: 2022/05/10 10:43:46 by vlima-nu         ###   ########.fr       */
+/*   Updated: 2022/05/25 12:31:13 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ static int	count_redirects(char *s)
 		while (ft_strchr("><", s[i]) && s[i])
 			i++;
 		if ((s[j] != s[j + 1] && ft_strchr("><", s[j + 1])) || i - j > 2)
-			ft_printf(STDERR, DIFF_REDIR, s[i + 1 + (j - i > 2)]);
+			printf("syntax error near unexpeced token\n");
 		else if (!s[i])
 			ft_printf(STDERR, BL_IN_REDIR);
 		else
